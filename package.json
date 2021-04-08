@@ -1,0 +1,53 @@
+{
+  "name": "@stefanprobst/remark-preset",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "engines": {
+    "node": ">=12.9",
+    "yarn": "1.x"
+  },
+  "scripts": {
+    "format": "prettier . --check --ignore-path .gitignore",
+    "format:fix": "yarn format --write",
+    "lint:md": "remark . --ignore-path .gitignore",
+    "lint:md:fix": "yarn lint:md --output"
+  },
+  "dependencies": {
+    "remark-lint-first-heading-level": "^2.0.1",
+    "remark-lint-no-empty-url": "^2.0.1",
+    "remark-preset-lint-markdown-style-guide": "^4.0.0",
+    "remark-preset-lint-recommended": "^5.0.0",
+    "remark-validate-links": "^10.0.4"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.1",
+    "@commitlint/config-conventional": "^12.1.1",
+    "@stefanprobst/commitlint-config": "^1.0.1",
+    "@stefanprobst/prettier-config": "^1.0.1",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1",
+    "remark-cli": "^9.0.0",
+    "simple-git-hooks": "^2.3.1"
+  },
+  "commitlint": {
+    "extends": "@stefanprobst/commitlint-config"
+  },
+  "lint-staged": {
+    "*.md": [
+      "prettier --write",
+      "remark --output --quiet"
+    ],
+    "*.json": "prettier --write"
+  },
+  "prettier": "@stefanprobst/prettier-config",
+  "remarkConfig": {
+    "plugins": [
+      "."
+    ]
+  },
+  "simple-git-hooks": {
+    "commit-msg": "yarn commitlint --edit",
+    "pre-commit": "yarn lint-staged"
+  }
+}
