@@ -171,6 +171,16 @@
   resolved "https://registry.npmjs.org/@stefanprobst/prettier-config/-/prettier-config-1.0.1.tgz#4121a97e86deb7f103794a2075e0a5155321ff32"
   integrity sha512-9pi/jRU+TRwlCJ48RCOhipKMjkbZfl+K1jnpV19w4ldm9eojaSo9HT5bWEJTkTCd2LBuHmbfsLpe6MYN6BwJSg==
 
+"@stefanprobst/remark-lint-no-auto-links@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/@stefanprobst/remark-lint-no-auto-links/-/remark-lint-no-auto-links-1.0.0.tgz#6b6299e59299be5995ea90aac7cd30d0a59ebbd4"
+  integrity sha512-VrNoSGGJutSHDWfdW930f5VWN7cutaeinzT4yITIp4MvrJyBiuh+HIkoeIrVAMNhoi2iGyDF1nbOmmE61AoiRA==
+  dependencies:
+    unified-lint-rule "^1.0.6"
+    unist-util-generated "^1.1.6"
+    unist-util-position "^3.1.0"
+    unist-util-visit "^2.0.3"
+
 "@types/mdast@^3.0.0":
   version "3.0.3"
   resolved "https://registry.npmjs.org/@types/mdast/-/mdast-3.0.3.tgz#2d7d671b1cd1ea3deb306ea75036c2a0407d2deb"
@@ -2509,7 +2519,7 @@ unified-engine@^8.0.0:
     vfile-reporter "^6.0.0"
     vfile-statistics "^1.1.0"
 
-unified-lint-rule@^1.0.0:
+unified-lint-rule@^1.0.0, unified-lint-rule@^1.0.6:
   version "1.0.6"
   resolved "https://registry.npmjs.org/unified-lint-rule/-/unified-lint-rule-1.0.6.tgz#b4ab801ff93c251faa917a8d1c10241af030de84"
   integrity sha512-YPK15YBFwnsVorDFG/u0cVVQN5G2a3V8zv5/N6KN3TCG+ajKtaALcy7u14DCSrJI+gZeyYquFL9cioJXOGXSvg==
@@ -2536,7 +2546,7 @@ unified@^9.1.0:
     trough "^1.0.0"
     vfile "^4.0.0"
 
-unist-util-generated@^1.0.0, unist-util-generated@^1.1.0:
+unist-util-generated@^1.0.0, unist-util-generated@^1.1.0, unist-util-generated@^1.1.6:
   version "1.1.6"
   resolved "https://registry.npmjs.org/unist-util-generated/-/unist-util-generated-1.1.6.tgz#5ab51f689e2992a472beb1b35f2ce7ff2f324d4b"
   integrity sha512-cln2Mm1/CZzN5ttGK7vkoGw+RZ8VcUH6BtGbq98DDtRGquAAOXig1mrBQYelOwMXYS8rK+vZDyyojSjp7JX+Lg==
@@ -2573,7 +2583,7 @@ unist-util-visit-parents@^3.0.0:
     "@types/unist" "^2.0.0"
     unist-util-is "^4.0.0"
 
-unist-util-visit@^2.0.0:
+unist-util-visit@^2.0.0, unist-util-visit@^2.0.3:
   version "2.0.3"
   resolved "https://registry.npmjs.org/unist-util-visit/-/unist-util-visit-2.0.3.tgz#c3703893146df47203bb8a9795af47d7b971208c"
   integrity sha512-iJ4/RczbJMkD0712mGktuGpm/U4By4FfDonL7N/9tATGIF4imikjOuagyMY53tnZq3NP6BcmlrHhEKAfGWjh7Q==

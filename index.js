@@ -17,6 +17,8 @@ module.exports = {
     [require('remark-lint-list-item-spacing'), { checkBlanks: true }],
     [require('remark-lint-ordered-list-marker-value'), 'ordered'],
     [require('remark-lint-first-heading-level'), 2],
+    require('@stefanprobst/remark-lint-no-auto-links'),
+    [require('remark-lint-no-auto-link-without-protocol'), false],
     require('remark-lint-no-empty-url'),
     require('remark-validate-links'),
     [require('remark-lint-file-extension'), false],
